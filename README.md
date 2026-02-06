@@ -8,6 +8,9 @@ Upstage의 모든 API를 직접 체험하고 학습하는 인터랙티브 실습
 
 ### 1. [💬 Chat Completions](./01_chat_completions/)
 Solar 모델의 모든 파라미터를 실시간으로 테스트하는 Playground
+
+![Chat Completions Demo](./01_chat_completions/images/main_ui.gif)
+
 - Temperature, Top-P, Frequency/Presence Penalty 조절
 - JSON Schema 기반 구조화된 출력
 - Function Calling으로 외부 API 연동
