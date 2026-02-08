@@ -1,6 +1,6 @@
 # 🚀 Upstage API Hands-on Lab
 
-Upstage의 모든 API를 직접 체험하고 학습하는 인터랙티브 실습 모음입니다.
+Upstage의 모든 API를 직접 체험하고 학습하는 실습 모음입니다.
 
 ---
 
@@ -11,16 +11,36 @@ Solar 모델의 모든 파라미터를 실시간으로 테스트하는 Playgroun
 
 ![Chat Completions Demo](./01_chat_completions/images/main_ui.gif)
 
+**주요 기능:**
 - Temperature, Top-P, Frequency/Presence Penalty 조절
 - JSON Schema 기반 구조화된 출력
 - Function Calling으로 외부 API 연동
 - Reasoning Effort 설정 (solar-pro2/pro3)
 
-### 2. 📄 Document Digitization (예정)
+**실습 튜토리얼:**
+- Temperature로 창의성 조절하기
+- JSON Schema로 구조화된 데이터 추출
+- Function Calling으로 날씨 API 연동
+
+---
+
+### 2. [📄 Document Digitization](./02_document_digitization/)
 문서를 디지털 데이터로 변환
-- Document Parsing: 구조 분석 및 Markdown 변환
+
+![Document Digitization Demo](./02_document_digitization/images/main_ui.gif)
+
+**주요 기능:**
+- Document Parse: 구조 분석 및 Markdown 변환
 - Document OCR: 이미지 텍스트 추출
-- Asynchronous API: 대용량 문서 비동기 처리
+- Base64 인코딩: 요소 이미지 추출
+- Enhanced 모드: 복잡한 표/차트 처리
+
+**실습 튜토리얼:**
+- 복잡한 재무제표 파싱 (삼성전자 사례)
+- OCR로 문서 텍스트 추출
+- Base64 인코딩으로 요소 추출
+
+---
 
 ### 3. 🔍 Information Extraction (예정)
 문서에서 원하는 정보를 자동 추출
@@ -48,14 +68,19 @@ Upstage 클라우드 파일 관리
 1. **API 키 발급**: [Upstage Console](https://console.upstage.ai/) → API Keys
 2. **Python 3.8+** 설치
 
-### 공통 설치
-```bash
-pip install streamlit langchain-upstage
-```
+### 실습별 설치 및 실행
 
-### 실습 실행
+#### 01. Chat Completions
 ```bash
 cd 01_chat_completions
+pip install streamlit langchain-upstage
+streamlit run app.py
+```
+
+#### 02. Document Digitization
+```bash
+cd 02_document_digitization
+pip install streamlit requests pdf2image pillow
 streamlit run app.py
 ```
 
