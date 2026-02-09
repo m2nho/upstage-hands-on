@@ -42,11 +42,20 @@ Solar 모델의 모든 파라미터를 실시간으로 테스트하는 Playgroun
 
 ---
 
-### 3. 🔍 Information Extraction (예정)
+### 3. [🔍 Information Extraction](./03_information_extraction/)
 문서에서 원하는 정보를 자동 추출
+
+![Information Extraction Demo](./03_information_extraction/images/main_ui.gif)
+
+**주요 기능:**
 - Universal Extraction: JSON 스키마 기반 제로샷 추출
 - Schema Generation: 최적 스키마 자동 생성
-- Prebuilt Extraction: 영수증, 사업자등록증 특화 모델
+- Prebuilt Extraction: 영수증, 항공화물운송장 등 특화 모델
+
+**실습 튜토리얼:**
+- 이력서 자동 파싱 (Universal)
+- 송장 스키마 자동 생성
+- 영수증 정보 추출 (Prebuilt)
 
 ### 4. 📊 Document Classification (예정)
 문서 종류 자동 분류
@@ -84,25 +93,9 @@ pip install streamlit requests pdf2image pillow
 streamlit run app.py
 ```
 
----
-
-## 📚 구현 원칙
-
-- **LangChain 우선**: `langchain-upstage` 지원 기능은 LangChain으로 구현
-- **SDK 보완**: LangChain 미지원 기능은 Official Python SDK 사용
-- **독립 실행**: 각 실습은 독립적으로 실행 가능
-- **코드 제공**: 모든 실습에서 실행 가능한 Python 코드 자동 생성
-
----
-
-## 🔗 참고 자료
-
-- [Upstage API 공식 문서](https://developers.upstage.ai/)
-- [LangChain Upstage 통합](https://python.langchain.com/docs/integrations/chat/upstage)
-- [Upstage Console](https://console.upstage.ai/)
-
----
-
-## 📝 라이선스
-
-MIT License
+#### 03. Information Extraction
+```bash
+cd 03_information_extraction
+pip install streamlit requests
+streamlit run app.py
+```
