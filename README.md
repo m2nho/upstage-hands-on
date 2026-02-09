@@ -57,17 +57,24 @@ Solar 모델의 모든 파라미터를 실시간으로 테스트하는 Playgroun
 - 송장 스키마 자동 생성
 - 영수증 정보 추출 (Prebuilt)
 
-### 4. 📊 Document Classification (예정)
-문서 종류 자동 분류
+---
 
-### 5. 🧮 Embeddings (예정)
-텍스트 벡터화 및 유사도 검색
+### 4. [🧮 Embeddings & RAG Pipeline](./04_embeddings/)
+텍스트 벡터화 및 RAG 시스템 구축
 
-### 6. 📁 Files Management (예정)
-Upstage 클라우드 파일 관리
+![Embeddings Demo](./04_embeddings/images/document_parsing.gif)
 
-### 7. ⚙️ Jobs Management (예정)
-비동기 작업 생명주기 관리
+**주요 기능:**
+- RAG Pipeline: Document Parse + Embeddings + ChatUpstage
+- 일반 LLM: 문서 없이 Solar와 대화 (RAG 비교용)
+- Vector DB 내부: Chroma 벡터 저장소 투명하게 확인
+- 코사인 유사도 기반 검색
+- LangChain 통합 (ChatUpstage, Embeddings, Chroma)
+
+**실습 튜토리얼:**
+- AI 기본법 문서 기반 질의응답 (RAG)
+- 일반 LLM vs RAG 비교
+- Vector DB 내부 탐색
 
 ---
 
@@ -97,5 +104,12 @@ streamlit run app.py
 ```bash
 cd 03_information_extraction
 pip install streamlit requests
+streamlit run app.py
+```
+
+#### 04. Embeddings & RAG Pipeline
+```bash
+cd 04_embeddings
+pip install streamlit langchain-upstage langchain-chroma langchain-community chromadb numpy requests
 streamlit run app.py
 ```

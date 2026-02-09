@@ -1,0 +1,7 @@
+streamlit
+langchain-upstage
+langchain-chroma
+langchain-community
+chromadb
+numpy
+requests
